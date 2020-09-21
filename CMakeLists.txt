@@ -1,27 +1,15 @@
 cmake_minimum_required (VERSION 3.5)
 SET (CMAKE_BUILD_TYPE Debug)
 
-project (make)
-# The project version number.
+project (main)
+# The version number.
 SET (${PROJECT_NAME}_VERSION_MAJOR 1)
 SET (${PROJECT_NAME}_VERSION_MINOR 0)
 
-# the opencv package
 find_package( OpenCV REQUIRED )
 
-
-include(cmake/googletest.cmake)
-fetch_googletest(
-    ${PROJECT_SOURCE_DIR}/cmake
-    ${PROJECT_BINARY_DIR}/googletest
-    )
-
-enable_testing()
-add_subdirectory(test)
-
-set (CMAKE_C_STANDARD 11)
 SET (CMAKE_C_COMPILER             "/usr/bin/clang")
-SET (CMAKE_C_FLAGS                "-Wall -std=c11")
+SET (CMAKE_C_FLAGS                "-Wall -std=c99")
 SET (CMAKE_C_FLAGS_DEBUG          "-g")
 SET (CMAKE_C_FLAGS_MINSIZEREL     "-Os -DNDEBUG")
 SET (CMAKE_C_FLAGS_RELEASE        "-O4 -DNDEBUG")
