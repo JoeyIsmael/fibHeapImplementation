@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/joseph/projects/cppstuff/fibHeapImplementation/src/fibHeap.cpp
-iostream
--
-
-/Users/joseph/projects/cppstuff/fibHeapImplementation/src/main.cpp
-iostream
--
-
 /Users/joseph/projects/cppstuff/fibHeapImplementation/src/node.cpp
 iostream
 -
